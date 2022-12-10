@@ -5,10 +5,7 @@ from PyQt5.QtWidgets import (
         QGroupBox, QButtonGroup, QRadioButton,  
         QPushButton, QLabel)
 
-#--------------------------------------#
-'''add randint'''
 from random import randint, shuffle 
-#--------------------------------------#
  
 class Question():
     def __init__(self, question, right_answer, wrong1, wrong2, wrong3):
@@ -140,7 +137,6 @@ def check_answer():
     
  
 def next_question():
-    #------------------------------------------#
     ''' asks a random question from the list '''
     # ADD 1 TO TOTAL AMOUNT OF QUESTIONS
     window.total += 1
@@ -152,7 +148,6 @@ def next_question():
     current_question = randint(
         0, len(questions_list) - 1) 
     q = questions_list[current_question] 
-    #------------------------------------------#
     ask(q) # asks
 
 # REMOVE: 
